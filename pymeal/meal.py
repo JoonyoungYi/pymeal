@@ -1,7 +1,6 @@
 from pymeal.constants import REGION, PATH, WEEKDAY
 
 import requests
-import json
 
 class School:
 	__cookies = {

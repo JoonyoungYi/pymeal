@@ -18,5 +18,5 @@ dist 폴더의 .whl 파일을 받아
 ## 문제 해결
 [Issue](https://github.com/tom5079/pymeal/issues "pymeal issues")
 를 열어 주시거나
-<tom20001229@gmail.com/>으로 메일을 보내 주세요.
+<tom20001229@gmail.com/>으로 메일을 보내 주세요.  
 메일은 가끔씩만 확인하니 주로 Issue를 열어주시면 감사하겠습니다.

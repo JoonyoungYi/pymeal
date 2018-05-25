@@ -26,4 +26,4 @@ class PATH:
 	YEARLY_SCHEDULE = 'sts_sci_sf00_001.ws'
 	MONTHLY_SCHEDULE = 'sts_sci_sf01_001.ws'
 
-WEEKDAY = ['sun', 'mon', 'tue', 'wed', 'the', 'fri', 'sat']
+WEEKDAY = ['mon', 'tue', 'wed', 'the', 'fri', 'sat', 'sun']

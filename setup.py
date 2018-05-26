@@ -6,7 +6,7 @@ install_requires = [
 
 setup(
 	name='pymeal',
-	version='1.0',
+	version='1.1',
 	description='초중고 급식 Python 라이브러리',
 	author='Son Minseok',
 	author_email='tom20001229@gmail.com',

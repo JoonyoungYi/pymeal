@@ -46,7 +46,7 @@ class School:
 		
 		return diet
 	
-	def getWeeklyDiet(self, date):
+	def getWeeklyDiet(self, date, replace=''):
 		diet = list()
 		r = list()
 		
@@ -72,6 +72,9 @@ class School:
 				
 				_temp['menu'] = r[i]['resultSVO']['weekDietList'][2][weekday].replace('<br />', '\n') if len(r[i]['resultSVO']['weekDietList']) is 3 else ''
 				_temp['cal'] = r[i]['resultSVO']['dietNtrList'][0]['dy{}'.format(3 if weekday == 'sun' else WEEKDAY.index(weekday) + 4)]
+				
+				if _temp['menu'].strip() == '':
+					_temp['menu'] = replace
 				
 				menu.append(_temp)
 			

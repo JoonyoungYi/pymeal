@@ -71,14 +71,17 @@ class School:
 			for i in range(3):
 				_temp = dict()
 				
-				_temp['menu'] = r[i]['resultSVO']['weekDietList'][2][weekday].replace('<br />', '\n')[:-1] if len(r[i]['resultSVO']['weekDietList']) is 3 else ''
+				_temp['menu'] = r[i]['resultSVO']['weekDietList'][2][weekday] if len(r[i]['resultSVO']['weekDietList']) is 3 else ''
 				_temp['cal'] = r[i]['resultSVO']['dietNtrList'][0]['dy{}'.format(3 if weekday == 'sun' else WEEKDAY.index(weekday) + 4)]
 				
-				if _temp['menu'].strip() == '':
-					_temp['menu'] = replace
+				if regex == None:
+					_temp['menu'] = _temp['menu'].replace('<br />', '\n')
+				else:
+					regex = re.compile(regex)
+					_temp['menu'] = re.findall(regex, _temp['menu'])
 				
-				if regex != None:
-					_temp['menu'] = re.search(regex, _temp['menu'])
+				if len(_temp['menu']) == 0:
+					_temp['menu'] = replace
 				
 				menu.append(_temp)
 			

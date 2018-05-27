@@ -77,7 +77,7 @@ class School:
 				if _temp['menu'].strip() == '':
 					_temp['menu'] = replace
 				
-				if criteria != None:
+				if regex != None:
 					_temp['menu'] = re.search(regex, _temp['menu'])
 				
 				menu.append(_temp)

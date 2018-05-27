@@ -81,7 +81,7 @@ class School:
 					_temp['menu'] = re.findall(regex, _temp['menu'])
 				
 				if len(_temp['menu']) == 0:
-					_temp['menu'] = replace
+					_temp['menu'] = [replace]
 				
 				menu.append(_temp)
 			

@@ -1,6 +1,7 @@
 from pymeal.constants import REGION, PATH, WEEKDAY
 
 import requests
+import re
 
 class School:
 	__cookies = {
@@ -46,7 +47,7 @@ class School:
 		
 		return diet
 	
-	def getWeeklyMeal(self, date, replace=''):
+	def getWeeklyMeal(self, date, replace='', regex=None):
 		diet = list()
 		r = list()
 		
@@ -74,7 +75,10 @@ class School:
 				_temp['cal'] = r[i]['resultSVO']['dietNtrList'][0]['dy{}'.format(3 if weekday == 'sun' else WEEKDAY.index(weekday) + 4)]
 				
 				if _temp['menu'].strip() == '':
-					_temp['menu'] = replace		
+					_temp['menu'] = replace
+				
+				if criteria != None:
+					_temp['menu'] = re.search(regex, _temp['menu'])
 				
 				menu.append(_temp)
 			

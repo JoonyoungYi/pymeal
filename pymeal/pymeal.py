@@ -21,7 +21,7 @@ class School:
 		self.__cookies['WMONID'] = cookies['WMONID']
 		self.__cookies['JSESSIONID'] = cookies['JSESSIONID']
 	
-	def getMonthlyDiet(self, date):
+	def getMonthlyMeal(self, date):
 		diet = dict()
 		
 		payload = {
@@ -46,7 +46,7 @@ class School:
 		
 		return diet
 	
-	def getWeeklyDiet(self, date, replace=''):
+	def getWeeklyMeal(self, date, replace=''):
 		diet = list()
 		r = list()
 		
@@ -74,7 +74,7 @@ class School:
 				_temp['cal'] = r[i]['resultSVO']['dietNtrList'][0]['dy{}'.format(3 if weekday == 'sun' else WEEKDAY.index(weekday) + 4)]
 				
 				if _temp['menu'].strip() == '':
-					_temp['menu'] = replace
+					_temp['menu'] = replace		
 				
 				menu.append(_temp)
 			

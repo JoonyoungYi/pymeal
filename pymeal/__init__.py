@@ -1,1 +1,1 @@
-from pymeal.meal import *
+from pymeal.pymeal import *

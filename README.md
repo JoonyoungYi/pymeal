@@ -7,9 +7,6 @@ pymeal은 나이스 학생서비스에 접속해 급식을 가져오는 라이�
 ## 설치
 **Python 3.0 이상에서만 동작합니다**  
 `pip install pymeal`으로 간단하게 설치하실 수 있습니다
-### 수동 설치
-dist 폴더의 .whl 파일을 받아
-`pip install ~.whl`을 실행하시면 됩니다.
 
 ## 사용법
 [Wiki](https://github.com/tom5079/pymeal/wiki "pymeal wiki")
